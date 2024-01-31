@@ -25,6 +25,9 @@ public:
     }
 };
 
+// the overall time complexity is O(n log n) + O(n^2), which simplifies to O(n^2).
+// the space complexity of the solution is O(1) as it does not depend on the size of the input vector
+
 // Problem Statement:
 // The objective is to find the sum of three elements in the given vector nums such that the sum is closest to the target value. The solution should return the closest sum.
 
