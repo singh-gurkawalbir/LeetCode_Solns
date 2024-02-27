@@ -21,7 +21,6 @@ private:
         return 1 + max(lh, rh);
     }
 };
-
 // Time Complexity (TC): O(N)
 // Space Complexity (SC): O(H), where H is the height of the binary tree
 
