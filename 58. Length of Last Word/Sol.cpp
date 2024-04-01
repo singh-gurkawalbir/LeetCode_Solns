@@ -38,3 +38,42 @@ public:
 // The space complexity is constant as the code only uses a constant amount of extra space regardless of the input size.
 // The only variables used are ans and right, and their space requirements do not depend on the size of the input.
 // The space complexity is O(1).
+
+// traverse from right
+// If initially spaces are found , ignore it.
+// if any other character found start counting it unlill next space found.
+// If space found just return the count
+// Complexity
+// Time complexity:O(n) , as the whole string can be one sentence
+
+// Space complexity:O(1)
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        count = 0
+        for i in range(len(s) - 1, -1, -1):
+            if s[i] == ' ' and count == 0:
+                continue
+            if s[i] == ' ' and count != 0:
+                return count
+            if s[i] != ' ':
+                count += 1
+        return count
+
+// Approach
+// we can use trim() inbuilt function to remove padding sapces ie on the start and end
+// now we have spaces left in the middle only
+// let us split them using the space as a seperator
+// from them we need to return the last element's length
+// thats it 😄😄
+// thank you😄😄
+// hope you understood if not comment below i will help
+
+// Complexity
+// Time complexity:O(N)
+// Space complexity:O(N)
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        words=s.split()
+        return len(words[-1])
