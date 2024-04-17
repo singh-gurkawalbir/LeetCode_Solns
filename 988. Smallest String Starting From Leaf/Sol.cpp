@@ -1,20 +1,20 @@
-🎯Problem Explaination:
-The "Smallest String Starting From Leaf" problem asks us to find the lexicographically smallest string that starts from a leaf and ends at the root in a given binary tree, where each node contains a lowercase letter.
+// 🎯Problem Explaination:
+// The "Smallest String Starting From Leaf" problem asks us to find the lexicographically smallest string that starts from a leaf and ends at the root in a given binary tree, where each node contains a lowercase letter.
 
-🧠Thinking Behind the Solution:
-We will use a recursive DFS traversal where:
+// 🧠Thinking Behind the Solution:
+// We will use a recursive DFS traversal where:
 
-At each node, we'll append the current node's character to a string.
-If it's a leaf node (both children are null), we'll reverse the string (since we're building from leaf to root) and compare it with the smallest string found so far.
-Recursively continue the traversal for left and right children.
-Here's why DFS is preferred for this task:
+// At each node, we'll append the current node's character to a string.
+// If it's a leaf node (both children are null), we'll reverse the string (since we're building from leaf to root) and compare it with the smallest string found so far.
+// Recursively continue the traversal for left and right children.
+// Here's why DFS is preferred for this task:
 
-Depth-First Search (DFS): DFS is suitable for problems where you need to explore as far as possible along each branch before backtracking which perfectly alings to our problem requirement.
+// Depth-First Search (DFS): DFS is suitable for problems where you need to explore as far as possible along each branch before backtracking which perfectly alings to our problem requirement.
 
-Breadth-First Search (BFS): BFS can also be used be solve this problem but with little more modifications to the traversal. Because BFS is ideal for finding the shortest path in an unweighted graph or tree. It explores all the neighboring nodes at the present depth before moving on to nodes at the next depth level.
+// Breadth-First Search (BFS): BFS can also be used be solve this problem but with little more modifications to the traversal. Because BFS is ideal for finding the shortest path in an unweighted graph or tree. It explores all the neighboring nodes at the present depth before moving on to nodes at the next depth level.
 
-Approach✅:
-We are given a binary tree where each node contains a lowercase letter ('a' to 'z').
+// Approach✅:
+// We are given a binary tree where each node contains a lowercase letter ('a' to 'z').
 // Our goal is to find the lexicographically smallest string that starts from any leaf node and ends at the root.
 // We'll use a recursive DFS traversal to explore the tree.
 // Explanation of DFS Function (dfs()):
