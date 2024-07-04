@@ -37,3 +37,48 @@ public:
 // Sum nodes 4 + 5 + 2 = 11, and update the list to 4 -> 11 -> 0.
 // The final merged list is:
 // 4 -> 11
+
+
+
+Example
+Let's consider an example:
+
+Input List: 0 -> 1 -> 3 -> 0 -> 2 -> 2 -> 0
+
+Initial List:
+
+0 -> 1 -> 3 -> 0 -> 2 -> 2 -> 0
+Skip Initial Zero:
+
+head points to: 1 -> 3 -> 0 -> 2 -> 2 -> 0
+First Iteration:
+
+start points to 1.
+end points to 1.
+Sum values until 0:
+sum = 1 + 3 = 4
+Update start->val to 4.
+Update start->next to skip zero:
+
+4 -> 2 -> 2 -> 0
+Second Iteration:
+
+start points to 2.
+end points to 2.
+Sum values until 0:
+sum = 2 + 2 = 4
+Update start->val to 4.
+Update start->next to skip zero:
+
+4 -> 4
+Final List:
+
+4 -> 4
+So, the mergeNodes method merges nodes between zeros and returns a list of summed values.
+
+
+
+
+
+
+
